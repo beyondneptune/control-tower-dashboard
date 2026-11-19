@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# testing / coverage
+/coverage
+
+# env (NEVER commit real keys)
+.env
+.env*.local
+
+# vercel / turbo
+.vercel
+.turbo
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+**/.DS_Store
+*.pem
