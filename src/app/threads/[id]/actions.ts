@@ -12,10 +12,10 @@ import { createAdminClient } from "@/lib/supabase/admin";
 
 const PACK_LABEL = `day11-post-remediation-validation`;
 const BUCKET_PRIORITY = [
-  "HAWA_OC1137",
-  "FLOWSERVE",
+  "CRESTLINE_OC1137",
+  "APEXFLOW",
   "LOW_LINK_CONF",
-  "YOUNUS_INVOICE",
+  "RAHUL_INVOICE",
   "PAVAN_RFQ_PO",
   "MIXED_LOW_CONF",
 ];

@@ -57,28 +57,28 @@ const PACK_LABEL = `day11-post-remediation-validation`;
 
 // Day 9 priority order (Crestline → Apex Flow Systems → Low-link-conf → Rahul → Arjun → Mixed)
 const BUCKET_PRIORITY = [
-  "HAWA_OC1137",
-  "FLOWSERVE",
+  "CRESTLINE_OC1137",
+  "APEXFLOW",
   "LOW_LINK_CONF",
-  "YOUNUS_INVOICE",
+  "RAHUL_INVOICE",
   "PAVAN_RFQ_PO",
   "MIXED_LOW_CONF",
 ];
 
 const BUCKET_LABEL: Record<string, string> = {
-  HAWA_OC1137: "Crestline OC 1137 (lighthouse case)",
-  FLOWSERVE: "Apex Flow Systems threads (largest customer)",
+  CRESTLINE_OC1137: "Crestline OC 1137 (lighthouse case)",
+  APEXFLOW: "Apex Flow Systems threads (largest customer)",
   LOW_LINK_CONF: "Threads with weak Tally evidence",
-  YOUNUS_INVOICE: "Invoice/payment threads",
+  RAHUL_INVOICE: "Invoice/payment threads",
   PAVAN_RFQ_PO: "RFQ / PO / quotation threads",
   MIXED_LOW_CONF: "Lower-confidence mixed",
 };
 
 const BUCKET_INSTRUCTIONS: Record<string, string> = {
-  HAWA_OC1137: "Validate that the Rahul + Arjun emails are about the same Crestline order. The Tally invoice should match the order context.",
-  FLOWSERVE: "Confirm the customer is Apex Flow Systems and the lifecycle stage matches the email evidence. The Tally link is currently ambiguous — don't worry, just say no/N/A if it doesn't look right.",
+  CRESTLINE_OC1137: "Validate that the Rahul + Arjun emails are about the same Crestline order. The Tally invoice should match the order context.",
+  APEXFLOW: "Confirm the customer is Apex Flow Systems and the lifecycle stage matches the email evidence. The Tally link is currently ambiguous — don't worry, just say no/N/A if it doesn't look right.",
   LOW_LINK_CONF: "These threads have weak Tally evidence. Mostly your job is to confirm whether the customer + stage are right, regardless of Tally.",
-  YOUNUS_INVOICE: "Invoice or payment threads. Check whether the PIPL invoice number / amount matches what the customer was discussing.",
+  RAHUL_INVOICE: "Invoice or payment threads. Check whether the PIPL invoice number / amount matches what the customer was discussing.",
   PAVAN_RFQ_PO: "Quotation / PO threads. Confirm the customer + the PO/RFQ number is real (not a regex false positive).",
   MIXED_LOW_CONF: "Low-confidence threads. Most are likely fine — just validate quickly.",
 };
